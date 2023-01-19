@@ -10,10 +10,16 @@ const addToCartIS = {
 
 const addToCartSlice = createSlice({
   name: "addToCart",
-  addToCartIS,
+  initialState: addToCartIS,
   reducers: {
-    setName: (state, action) => (state.name = action.payload),
+    setName: (state, action) => {
+      state.name = action.payload;
+    },
+    setQuantity: (state, action) => {
+      state.quantity = action.payload;
+    },
   },
 });
-export const { setName } = addToCartSlice.actions;
-export default addToCartSlice;
+
+export default addToCartSlice.reducer;
+export const { setName, setQuantity } = addToCartSlice.actions;
