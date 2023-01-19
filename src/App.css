@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#cart-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+#cart-scroll::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+#cart-scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #eb5e28;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("../public/fonts/Poppins-Bold.ttf"),
+    url("../public/fonts/Poppins-Light.ttf"),
+    url("../public/fonts/Poppins-Medium.ttf"),
+    url("../public/fonts/Poppins-Regular.ttf"),
+    url("../public/fonts/Poppins-SemiBold.ttf");
+}
+body {
+  width: 100vw;
+  background-color: #252422;
+  display: flex;
+  justify-content: center;
+}
+#root {
+  width: 80%;
+}
+.container {
+  font-family: poppins;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.add-form {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  margin: 10px 0;
+  color: #ccc5b9;
+}
+
+.form-control input,
+select {
+  width: 100%;
+  height: 30px;
+  border: 2px #ccc5b9 solid;
+  padding: 0 20px;
+  transition: all ease-in-out 0.1s;
+  color: #ccc5b9;
+  font-family: poppins;
+  background-color: #252422;
+}
+
+.form-control input:focus,
+select:focus {
+  border-radius: 7px;
+  box-shadow: 0px 0px 0px 5px #eb5e28;
+  background-color: #403d39;
+}
+.form-control input:hover,
+select:hover,
+.btn:hover {
+  border-radius: 7px;
+  transform: scale(1.05);
+  background-color: #403d39;
+}
+
+.btn {
+  height: 30px;
+  border: 2px #403d39 solid;
+  width: 200px;
+  background: none;
+  transition: all ease-in-out 0.1s;
+  display: grid;
+  place-items: center;
+}
+
+.btn:hover {
+  height: 30px;
+  border: 2px #403d39 solid;
+  width: 200px;
+  background-color: #403d39;
+}
+
+.btn-icon {
+  color: #06d6a0;
+  font-size: 20px;
+}
+
+.cart {
+  width: 100%;
+  height: 60%;
+  overflow-y: auto;
+  margin: 20px 0 20px;
+  border: #ccc5b9 2px solid;
+  scroll-behavior: smooth;
+}
+.cart table {
+  color: #403d39;
+  width: 100%;
+}
+
+.cart tbody {
+  height: 80%;
+  color: #ccc5b9;
+}
+
+.cart tbody tr {
+  height: 100px;
+}
+
+.cart tbody td {
+  height: 100px;
+  text-align: center;
+  border: #403d39 1px solid;
+}
+
+.img {
+  width: 300px;
+}
+
+.img img {
+  height: 100px;
+}
+
+.total {
+  width: 100%;
+  height: 10%;
+}
+.total table,
+tbody {
+  width: 50%;
+}
+
+.total td {
+  color: #403d39;
+  text-align: center;
+  border: #ccc5b9 2px solid;
+  width: 50%;
+}
+
+.total td:nth-child(2) {
+  color: #eb5e28;
+  width: 50%;
+}
+
+.delbtn {
+  color: #eb3f28;
+  cursor: pointer;
+  height: 2em;
+  width: 2em;
+}
+
+.errMsg {
+  width: 100%;
+  height: fit-content;
+  background-color: #403d39;
+  color: #eb3f28;
+  font-size: 10px;
+  text-align: center;
+  margin: 3px 0 3px;
+  border-radius: 5px;
+}
