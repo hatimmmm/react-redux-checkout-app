@@ -1,6 +1,6 @@
 import React from "react";
-
-// import { useState } from "react";
+import { useSelector } from "react-redux";
+import Item from "./Item";
 
 const Cart = () => {
   return (
@@ -16,7 +16,9 @@ const Cart = () => {
             <th className="del-btn">ACTION</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          <Item />
+        </tbody>
       </table>
     </div>
   );
