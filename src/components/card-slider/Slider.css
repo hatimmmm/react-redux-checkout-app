@@ -1,0 +1,90 @@
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+}
+
+.card-container {
+  min-width: 180px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  border-radius: 2rem;
+  margin: 20px;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+  border: #ccc5b9 3px solid;
+}
+.card-container:hover {
+  /* scale: 0.95; */
+  background-color: #403d39;
+}
+
+.card-img img {
+  height: 70px;
+}
+
+.card-name {
+  height: 30px;
+  overflow: hidden;
+}
+
+.card-name p {
+  text-align: center;
+  font-size: 1rem;
+  color: #fffcf2;
+}
+
+.price-size {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #ccc5b9;
+  font-size: 0.7rem;
+  padding: 0 20px;
+}
+
+.card-price,
+.card-size {
+  border-radius: 10px;
+  background-color: #ccc5b9;
+  color: #403d39;
+  padding: 0 5px;
+}
+
+.add-to-cart button {
+  height: 30px;
+  border: 2px #eb5e28 solid;
+  border-radius: 7px;
+  color: #eb5e28;
+  width: 100px;
+  background: none;
+  transition: all ease-in-out 0.1s;
+  display: grid;
+  place-items: center;
+  font-family: poppins;
+  font-size: 0.8rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.add-to-cart button:hover {
+  background-color: #eb5e28;
+  color: #403d39;
+  scale: 1.05;
+}
+
+.chevron {
+  color: #ccc5b9;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
