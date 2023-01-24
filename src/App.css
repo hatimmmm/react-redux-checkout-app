@@ -1,5 +1,5 @@
 @import url("./components/add-to-cart/addToCart.css");
-@import url("../src/components/card-slider/Slider.css");
+@import url("../src/components/carousel/carousel.css");
 @import url("../src/components/cart/cart.css");
 @import url("../src/components/item/item.css");
 @import url("../src/components/total/total.css");
@@ -51,70 +51,6 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-}
-
-.cart {
-  width: 100%;
-  height: 50%;
-  overflow-y: auto;
-  margin: 20px 0 20px;
-  border: #ccc5b9 2px solid;
-  scroll-behavior: smooth;
-}
-.cart table {
-  color: #403d39;
-  width: 100%;
-}
-
-.cart tbody {
-  height: 80%;
-  color: #ccc5b9;
-}
-
-.cart tbody tr {
-  height: 100px;
-}
-
-.cart tbody td {
-  height: 100px;
-  text-align: center;
-  border: #403d39 1px solid;
-}
-
-.img {
-  width: 300px;
-}
-
-.img img {
-  height: 100px;
-}
-
-.total {
-  width: 100%;
-  height: 10%;
-}
-.total table,
-tbody {
-  width: 50%;
-}
-
-.total td {
-  color: #403d39;
-  text-align: center;
-  border: #ccc5b9 2px solid;
-  width: 50%;
-}
-
-.total td:nth-child(2) {
-  color: #eb5e28;
-  width: 50%;
-}
-
-.delbtn {
-  color: #eb3f28;
-  cursor: pointer;
-  height: 2em;
-  width: 2em;
 }
 
 .errMsg {
