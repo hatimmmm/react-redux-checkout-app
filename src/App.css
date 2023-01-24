@@ -1,5 +1,8 @@
 @import url("./components/add-to-cart/addToCart.css");
 @import url("../src/components/card-slider/Slider.css");
+@import url("../src/components/cart/cart.css");
+@import url("../src/components/item/item.css");
+@import url("../src/components/total/total.css");
 
 * {
   padding: 0;

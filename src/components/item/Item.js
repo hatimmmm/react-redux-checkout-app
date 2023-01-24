@@ -1,7 +1,7 @@
 import React from "react";
 import { BsFillBagXFill } from "react-icons/bs";
 import { useSelector, useDispatch } from "react-redux";
-import { remItem } from "../store/features/cart/cartSlice";
+import { remItem } from "../../store/features/cart/cartSlice";
 
 const Item = () => {
   const dispatch = useDispatch();
