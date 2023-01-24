@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import data from "../../data/items";
+import products from "../../data/techProducts";
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: { data: data, items: [] },
+  initialState: { data: data, items: [], products: products },
   reducers: {
     setItems: (state, action) => {
       state.items = [...state.items, action.payload];

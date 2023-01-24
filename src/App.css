@@ -3,7 +3,7 @@
 @import url("../src/components/cart/cart.css");
 @import url("../src/components/item/item.css");
 @import url("../src/components/total/total.css");
-
+@import url("../src/pages/products/products.css");
 * {
   padding: 0;
   margin: 0;
@@ -36,7 +36,7 @@
     url("../public/fonts/Poppins-SemiBold.ttf");
 }
 body {
-  width: 100vw;
+  width: 100%;
   background-color: #252422;
   display: flex;
   justify-content: center;

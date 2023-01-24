@@ -5,10 +5,8 @@ import "react-multi-carousel/lib/styles.css";
 import { setItems } from "../../store/features/cart/cartSlice";
 import { v4 as uuidv4 } from "uuid";
 
-const Slider = ({ deviceType }) => {
-  const { data } = useSelector((state) => state.cart);
+const Slider = ({ data, logo }) => {
   const dispatch = useDispatch();
-
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -42,46 +40,53 @@ const Slider = ({ deviceType }) => {
   };
 
   return (
-    <Carousel
-      swipeable={true}
-      draggable={true}
-      showDots={false}
-      responsive={responsive}
-      ssr={true} // means to render carousel on server-side.
-      infinite={false}
-      // autoPlay={deviceType !== "mobile" ? true : false}
-      autoPlaySpeed={1000}
-      keyBoardControl={true}
-      // customTransition="all .5"
-      // transitionDuration={500}
-      containerClass="carousel-container"
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      deviceType={deviceType}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
-    >
-      {data.map((item) => {
-        return (
-          <div className="card-container" key={item.name}>
-            <div className="card-img">
-              <img src={item.image} alt={item.name} />
+    <div>
+      <div className="separator">
+        <span className="line"></span>
+        <img src={logo} alt={logo} />
+        <span className="line"></span>
+      </div>
+      <Carousel
+        swipeable={true}
+        draggable={true}
+        showDots={false}
+        responsive={responsive}
+        ssr={true} // means to render carousel on server-side.
+        infinite={false}
+        // autoPlay={deviceType !== "mobile" ? true : false}
+        autoPlaySpeed={1000}
+        keyBoardControl={true}
+        // customTransition="all .5"
+        // transitionDuration={500}
+        containerClass="carousel-container"
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        // deviceType={}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+      >
+        {data.map((item) => {
+          return (
+            <div className="card-container" key={item.name}>
+              <div className="card-img">
+                <img src={item.image} alt={item.name} />
+              </div>
+              <div className="card-name">
+                <p>{item.name}</p>
+              </div>
+              <div className="price-size">
+                <div className="card-size">{item.size}"</div>
+                <div className="card-price">{item.price}.00DH</div>
+              </div>
+              <div className="add-to-cart">
+                <button type="button" onClick={(e) => onClick(e, item.name)}>
+                  add to cart
+                </button>
+              </div>
             </div>
-            <div className="card-name">
-              <p>{item.name}</p>
-            </div>
-            <div className="price-size">
-              <div className="card-size">{item.size}"</div>
-              <div className="card-price">{item.price}.00DH</div>
-            </div>
-            <div className="add-to-cart">
-              <button type="button" onClick={(e) => onClick(e, item.name)}>
-                add to cart
-              </button>
-            </div>
-          </div>
-        );
-      })}
-    </Carousel>
+          );
+        })}
+      </Carousel>
+    </div>
   );
 };
 
