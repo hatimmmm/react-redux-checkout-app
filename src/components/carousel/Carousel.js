@@ -74,8 +74,12 @@ const Slider = ({ data, logo }) => {
                 <p>{item.name}</p>
               </div>
               <div className="price-size">
-                <div className="card-size">{item.size}"</div>
-                <div className="card-price">{item.price}.00DH</div>
+                <div
+                  className={item.inStock ? "in-stock" : "in-stock unavailable"}
+                >
+                  {item.inStock ? "in stock" : "unavailable"}
+                </div>
+                <div className="card-price">$ {item.price}.00</div>
               </div>
               <div className="add-to-cart">
                 <button type="button" onClick={(e) => onClick(e, item.name)}>
