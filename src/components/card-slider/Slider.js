@@ -48,7 +48,7 @@ const Slider = ({ deviceType }) => {
       showDots={false}
       responsive={responsive}
       ssr={true} // means to render carousel on server-side.
-      infinite={true}
+      infinite={false}
       // autoPlay={deviceType !== "mobile" ? true : false}
       autoPlaySpeed={1000}
       keyBoardControl={true}
