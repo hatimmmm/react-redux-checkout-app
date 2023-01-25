@@ -3,7 +3,7 @@
   min-height: 50%;
   overflow-y: auto;
   margin: 20px 0 20px;
-  border: #ccc5b9 2px solid;
+  /* border: #ccc5b9 2px solid; */
   border-radius: 20px;
   scroll-behavior: smooth;
 }
@@ -22,9 +22,9 @@
 }
 
 .cart tbody td {
-  height: 100px;
+  height: 150px;
   text-align: center;
-  border: #403d39 1px solid;
+  border-bottom: solid #403d39 3px;
 }
 .img {
   width: 300px;
@@ -32,10 +32,4 @@
 
 .img img {
   height: 100px;
-}
-.delbtn {
-  color: #eb3f28;
-  cursor: pointer;
-  height: 2em;
-  width: 2em;
 }

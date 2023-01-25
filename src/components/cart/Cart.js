@@ -9,7 +9,6 @@ const Cart = () => {
           <tr>
             <th className="img">IMAGE</th>
             <th className="name">NAME</th>
-            <th className="size">SIZE</th>
             <th className="price">PRICE</th>
             <th className="quantity">QUANTITY</th>
             <th className="del-btn">ACTION</th>

@@ -1,0 +1,26 @@
+.delbtn {
+  color: #eb2828;
+  cursor: pointer;
+  height: 1.5em;
+  width: 1.5em;
+  transition: all 0.1s ease-in-out;
+}
+
+.delbtn:hover {
+  color: #eb5e28;
+}
+
+.delbtn:active {
+  scale: 0.9;
+}
+
+body .quantity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chevron {
+  cursor: pointer;
+}

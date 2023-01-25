@@ -90,13 +90,6 @@
   scale: 1.05;
 }
 
-.chevron {
-  color: #ccc5b9;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-}
-
 .separator {
   display: flex;
   justify-content: space-around;
