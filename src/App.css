@@ -3,7 +3,9 @@
 @import url("../src/components/cart/cart.css");
 @import url("../src/components/item/item.css");
 @import url("../src/components/total/total.css");
+@import url("../src/components/NavBar/navBar.css");
 @import url("../src/pages/products/products.css");
+
 * {
   padding: 0;
   margin: 0;
@@ -41,8 +43,9 @@ body {
   display: flex;
   justify-content: center;
 }
+
 #root {
-  width: 80%;
+  width: 100%;
 }
 .container {
   font-family: poppins;
@@ -50,6 +53,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: column;
 }
 

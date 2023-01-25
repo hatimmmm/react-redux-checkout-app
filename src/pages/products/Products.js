@@ -1,11 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Carousel from "../../components/carousel/Carousel";
+import NavBar from "../../components/NavBar/NavBar";
 
 const Products = () => {
+  const { items } = useSelector((state) => state.cart);
   const { products } = useSelector((state) => state.cart);
   return (
-    <div>
+    <div className="products-container">
       <Carousel data={products.Apple} logo="img/brand-logo/Apple.png" />
       <Carousel data={products.Samsung} logo="img/brand-logo/Samsung.png" />
       <Carousel data={products.Microsoft} logo="img/brand-logo/Microsoft.png" />

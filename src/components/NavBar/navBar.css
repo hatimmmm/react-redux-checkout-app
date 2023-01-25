@@ -1,0 +1,40 @@
+nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  padding: 0 5%;
+}
+
+.cart-icon-container {
+  height: fit-content;
+  position: relative;
+  display: flex;
+  align-content: center;
+}
+
+.cart-icon {
+  height: 50px;
+  width: 50px;
+  color: #ccc5b9;
+  cursor: pointer;
+}
+
+.counter {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #eb5e28;
+  color: #403d39;
+  top: 0;
+  right: -5px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

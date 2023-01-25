@@ -33,7 +33,7 @@ const Slider = ({ data, logo }) => {
       if (data[x].name === name) {
         let id = uuidv4();
         let newItem = { id: id, ...data[x] };
-        console.log(newItem);
+        // console.log(newItem);
         dispatch(setItems(newItem));
       }
     }
