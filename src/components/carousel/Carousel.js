@@ -52,9 +52,9 @@ const Slider = ({ data, logo }) => {
         showDots={false}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
-        infinite={false}
-        // autoPlay={deviceType !== "mobile" ? true : false}
-        autoPlaySpeed={1000}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={5000}
         keyBoardControl={true}
         // customTransition="all .5"
         // transitionDuration={500}
