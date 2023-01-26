@@ -6,6 +6,9 @@ import { setItems } from "../../store/features/cart/cartSlice";
 import { v4 as uuidv4 } from "uuid";
 
 const Slider = ({ data, logo }) => {
+  const { items } = useSelector((state) => state.cart);
+  console.log(items);
+
   const dispatch = useDispatch();
   const responsive = {
     superLargeDesktop: {
@@ -27,16 +30,8 @@ const Slider = ({ data, logo }) => {
     },
   };
 
-  const onClick = (e, name) => {
-    e.preventDefault();
-    for (let x in data) {
-      if (data[x].name === name) {
-        let id = uuidv4();
-        let newItem = { id: id, ...data[x] };
-        // console.log(newItem);
-        dispatch(setItems(newItem));
-      }
-    }
+  const onAdd = (newItem) => {
+    dispatch(setItems(newItem));
   };
 
   return (
@@ -66,7 +61,7 @@ const Slider = ({ data, logo }) => {
       >
         {data.map((item) => {
           return (
-            <div className="card-container" key={item.name}>
+            <div className="card-container" key={item.id}>
               <div className="card-img">
                 <img src={item.image} alt={item.name} />
               </div>
@@ -82,7 +77,7 @@ const Slider = ({ data, logo }) => {
                 <div className="card-price">$ {item.price}.00</div>
               </div>
               <div className="add-to-cart">
-                <button type="button" onClick={(e) => onClick(e, item.name)}>
+                <button type="button" onClick={() => onAdd(item)}>
                   add to cart
                 </button>
               </div>

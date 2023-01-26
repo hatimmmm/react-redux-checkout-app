@@ -6,6 +6,7 @@
   /* border: #ccc5b9 2px solid; */
   border-radius: 20px;
   scroll-behavior: smooth;
+  padding-bottom: 50px;
 }
 .cart table {
   color: #403d39;
@@ -25,6 +26,10 @@
   height: 150px;
   text-align: center;
   border-bottom: solid #403d39 3px;
+}
+
+.quantity {
+  max-width: fit-content;
 }
 .img {
   width: 300px;

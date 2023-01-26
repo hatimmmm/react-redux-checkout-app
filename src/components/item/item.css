@@ -14,13 +14,16 @@
   scale: 0.9;
 }
 
-body .quantity {
+.amount {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+#itemTotal {
+  width: 15%;
+}
 .chevron {
   cursor: pointer;
 }
