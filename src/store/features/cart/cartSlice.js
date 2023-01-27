@@ -1,9 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import data from "../../data/items";
 import products from "../../data/techProducts";
-import { useEffect } from "react";
-import { FaYenSign } from "react-icons/fa";
-
+import { create } from "react-router-dom";
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
@@ -13,32 +11,30 @@ const cartSlice = createSlice({
   },
   reducers: {
     setItems: (state, action) => {
-      const itemIndex = state.items.findIndex(
-        (item) => item.id === action.payload.id
-      );
-      if (itemIndex >= 0) {
-        state.items[itemIndex].amount += 1;
+      const { id, price } = action.payload;
+      const item = state.items.find((i) => i.id === id);
+      if (item) {
+        item.amount += 1;
       } else {
-        const total = action.payload.price;
+        const total = price;
         const newItem = { ...action.payload, amount: 1, total: total };
         state.items = [...state.items, newItem];
       }
     },
     amountInc: (state, action) => {
-      const itemIndex = state.items.findIndex(
-        (item) => item.id === action.payload
-      );
-      state.items[itemIndex].amount += 1;
+      const item = state.items.find((i) => i.id === action.payload);
+      item.amount += 1;
+      item.total = item.amount * item.price;
     },
     amountDec: (state, action) => {
-      const itemIndex = state.items.findIndex(
-        (item) => item.id === action.payload
-      );
-      if (state.items[itemIndex].amount >= 1) {
-        state.items[itemIndex].amount -= 1;
+      const item = state.items.find((i) => i.id === action.payload);
+
+      if (item.amount >= 1) {
+        item.amount -= 1;
       } else {
-        state.items[itemIndex].amount = 1;
+        item.amount = 1;
       }
+      item.total = item.amount * item.price;
     },
     remItem: (state, action) => {
       state.items = state.items.filter((item) => item.id !== action.payload);
@@ -47,4 +43,5 @@ const cartSlice = createSlice({
 });
 
 export default cartSlice.reducer;
-export const { setItems, remItem, amountInc, amountDec } = cartSlice.actions;
+export const { setItems, remItem, amountInc, amountDec, setTotal } =
+  cartSlice.actions;

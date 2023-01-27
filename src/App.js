@@ -1,17 +1,17 @@
 import "./App.css";
 import React from "react";
-import Cart from "./components/cart/Cart";
-import Total from "./components/total/Total";
-import Carousel from "./components/carousel/Carousel";
 import Products from "./pages/products/Products";
 import Bag from "./pages/bag/Bag";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import NavBar from "./components/NavBar/NavBar";
 import { Routes, Route } from "react-router-dom";
+import { setTotal } from "./store/features/cart/cartSlice";
+import { useEffect } from "react";
 
 const App = () => {
   const { items } = useSelector((state) => state.cart);
   const amount = items.length;
+  const dispatch = useDispatch();
 
   return (
     <div className="container">

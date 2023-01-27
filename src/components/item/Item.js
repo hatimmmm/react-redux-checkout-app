@@ -8,6 +8,7 @@ import {
   setItems,
   amountInc,
   amountDec,
+  setTotal,
 } from "../../store/features/cart/cartSlice";
 
 const Item = () => {
@@ -33,7 +34,7 @@ const Item = () => {
             onClick={() => dispatch(amountDec(item.id))}
           />
         </td>
-        <td id="itemTotal">${item.amount * item.price}.00</td>
+        <td id="itemTotal">${item.total}.00</td>
 
         {/* <td className="del-btn">
           <BsFillBagXFill

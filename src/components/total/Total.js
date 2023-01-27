@@ -3,18 +3,9 @@ import { useSelector } from "react-redux";
 
 const Total = () => {
   const { items } = useSelector((state) => state.cart);
-  const initAmount = 0;
-  const initPrice = 0;
 
-  const sumAmount = items.reduce(
-    (accumulator, currentValue) => accumulator + currentValue.amount,
-    initAmount
-  );
-  const sumPrice = items.reduce(
-    (accumulator, currentValue) => accumulator + currentValue.price,
-    initPrice
-  );
-  let subtotal = sumPrice * sumAmount;
+  const subtotal = items.reduce((a, item) => a + item.total, 0);
+
   let total = subtotal + subtotal * (20 / 100);
 
   return (

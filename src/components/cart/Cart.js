@@ -11,9 +11,7 @@ const Cart = () => {
             <th className="name">NAME</th>
             <th className="price">PRICE</th>
             <th className="quantity">QUANTITY</th>
-            <th td className="itemTotal">
-              TOTAL
-            </th>
+            <th className="itemTotal">TOTAL</th>
             {/* <th className="del-btn">ACTION</th> */}
           </tr>
         </thead>
