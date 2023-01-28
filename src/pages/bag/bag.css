@@ -4,6 +4,15 @@
   padding: 10vh 10% 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+}
+
+.cart-title p {
+  text-align: center;
+  font-size: 40px;
+  color: #fffcf2;
+}
+.cart-title {
+  height: fit-content;
 }

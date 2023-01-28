@@ -1,18 +1,18 @@
 import React from "react";
 import { FaShoppingCart, FaStore } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = ({ amount }) => {
   return (
     <nav>
-      <Link to="/products">
-        <FaStore className="cart-icon" />
-      </Link>
+      <NavLink to="/products">
+        <FaStore className="link-icon" />
+      </NavLink>
       <div className="cart-icon-container">
-        <Link to="bag">
+        <NavLink to="bag">
           <span className="counter">{amount}</span>
-          <FaShoppingCart className="cart-icon" />
-        </Link>
+          <FaShoppingCart className="link-icon" />
+        </NavLink>
       </div>
     </nav>
   );

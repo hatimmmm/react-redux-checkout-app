@@ -1,5 +1,6 @@
 import React from "react";
 import { BsFillBagXFill } from "react-icons/bs";
+import { TiDelete } from "react-icons/ti";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
@@ -10,6 +11,7 @@ import {
   amountDec,
   setTotal,
 } from "../../store/features/cart/cartSlice";
+import { motion } from "framer-motion";
 
 const Item = () => {
   const dispatch = useDispatch();
@@ -17,8 +19,12 @@ const Item = () => {
 
   return items.map((item) => {
     return (
-      <tr key={item.id}>
+      <motion.tr layout key={item.id} className="table-row">
         <td className="img">
+          <TiDelete
+            className="remove"
+            onClick={() => dispatch(remItem(item.id))}
+          />
           <img alt={item.id} src={item.image} />
         </td>
         <td className="name">{item.name}</td>
@@ -42,7 +48,7 @@ const Item = () => {
             onClick={() => dispatch(remItem(item.id))}
           />
         </td> */}
-      </tr>
+      </motion.tr>
     );
   });
 };

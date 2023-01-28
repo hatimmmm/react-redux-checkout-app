@@ -7,32 +7,18 @@
   border-radius: 20px;
   scroll-behavior: smooth;
   padding-bottom: 50px;
+  position: relative;
 }
 .cart table {
   color: #403d39;
   width: 100%;
 }
 
-.cart tbody {
-  height: 80%;
-  color: #ccc5b9;
-}
-
-.cart tbody tr {
-  height: 100px;
-}
-
-.cart tbody td {
-  height: 150px;
-  text-align: center;
-  border-bottom: solid #403d39 3px;
-}
-
 .quantity {
   max-width: fit-content;
 }
-.img {
-  width: 300px;
+.table-row .img {
+  width: 20%;
 }
 
 .img img {
