@@ -3,12 +3,33 @@ import { useSelector, useDispatch } from "react-redux";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { setItems } from "../../store/features/cart/cartSlice";
-import { v4 as uuidv4 } from "uuid";
+
+const AddBtn = ({ onAdd, newItem }) => {
+  return (
+    <button
+      whileTap={{ scale: 0.8 }}
+      onClick={() => onAdd(newItem)}
+      className="add-to-cart"
+    >
+      add to cart
+    </button>
+  );
+};
+
+const RemBtn = ({ onAdd, newItem }) => {
+  return (
+    <button
+      whileTap={{ scale: 0.8 }}
+      onClick={() => onAdd(newItem)}
+      className="remove-btn"
+    >
+      remove
+    </button>
+  );
+};
 
 const Slider = ({ data, logo }) => {
   const { items } = useSelector((state) => state.cart);
-  console.log(items);
-
   const dispatch = useDispatch();
   const responsive = {
     superLargeDesktop: {
@@ -76,10 +97,12 @@ const Slider = ({ data, logo }) => {
                 </div>
                 <div className="card-price">$ {item.price}.00</div>
               </div>
-              <div className="add-to-cart">
-                <button type="button" onClick={() => onAdd(item)}>
-                  add to cart
-                </button>
+              <div>
+                {items.find((i) => i.id === item.id) ? (
+                  <RemBtn onAdd={onAdd} newItem={item} />
+                ) : (
+                  <AddBtn onAdd={onAdd} newItem={item} />
+                )}
               </div>
             </div>
           );
