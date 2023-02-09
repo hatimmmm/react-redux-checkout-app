@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Carousel from "../../components/carousel/Carousel";
-import NavBar from "../../components/NavBar/NavBar";
 
 const Products = () => {
   const { items } = useSelector((state) => state.cart);

@@ -3,7 +3,7 @@ import React from "react";
 import Products from "./pages/products/Products";
 import Bag from "./pages/bag/Bag";
 import { useSelector, useDispatch } from "react-redux";
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from "./components/navbar/NavBar";
 import { Routes, Route } from "react-router-dom";
 import { setTotal } from "./store/features/cart/cartSlice";
 import { useEffect } from "react";

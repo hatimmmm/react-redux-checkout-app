@@ -1,9 +1,9 @@
 @import url("./components/add-to-cart/addToCart.css");
 @import url("../src/components/carousel/carousel.css");
 @import url("../src/components/cart/cart.css");
-@import url("../src/components/item/item.css");
+@import url("../src/components/cart-item/cartItem.css");
 @import url("../src/components/total/total.css");
-@import url("../src/components/NavBar/navBar.css");
+@import url("../src/components/navbar/navBar.css");
 @import url("../src/pages/products/products.css");
 
 * {
