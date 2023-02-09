@@ -4,16 +4,24 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { setItems } from "../../store/features/cart/cartSlice";
 
-const AddBtn = ({ onAdd, newItem }) => {
-  return (
-    <button
-      whileTap={{ scale: 0.8 }}
-      onClick={() => onAdd(newItem)}
-      className="add-to-cart"
-    >
-      add to cart
-    </button>
-  );
+const AddBtn = ({ classname, onAdd, newItem }) => {
+  if (classname === "disabled-btn") {
+    return (
+      <button whileTap={{ scale: 0.8 }} className={classname}>
+        add to cart
+      </button>
+    );
+  } else {
+    return (
+      <button
+        whileTap={{ scale: 0.8 }}
+        onClick={() => onAdd(newItem)}
+        className={classname}
+      >
+        add to cart
+      </button>
+    );
+  }
 };
 
 const RemBtn = ({ onAdd, newItem }) => {
@@ -101,8 +109,13 @@ const Slider = ({ data, logo }) => {
                 {items.find((i) => i.id === item.id) ? (
                   <RemBtn onAdd={onAdd} newItem={item} />
                 ) : (
-                  <AddBtn onAdd={onAdd} newItem={item} />
+                  <AddBtn
+                    onAdd={onAdd}
+                    newItem={item}
+                    classname={!item.inStock ? "disabled-btn" : "add-to-cart"}
+                  />
                 )}
+                {}
               </div>
             </div>
           );

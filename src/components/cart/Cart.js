@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "../item/Item";
+import CartItem from "../cart-item/CartItem";
 
 const Cart = () => {
   return (
@@ -16,7 +16,7 @@ const Cart = () => {
           </tr>
         </thead>
         <tbody>
-          <Item />
+          <CartItem />
         </tbody>
       </table>
     </div>

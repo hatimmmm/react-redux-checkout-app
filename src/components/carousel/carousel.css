@@ -104,6 +104,18 @@
   cursor: pointer;
 }
 
+.disabled-btn {
+  height: 30px;
+  border: 2px #ccc5b9;
+  border-style: dashed;
+  border-radius: 7px;
+  color: #ccc5b9;
+  width: 100px;
+  background: none;
+  font-family: poppins;
+  font-size: 0.8rem;
+}
+
 .separator {
   display: flex;
   justify-content: space-around;

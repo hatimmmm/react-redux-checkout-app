@@ -17,6 +17,7 @@ const App = () => {
     <div className="container">
       <NavBar amount={amount} />
       <Routes>
+        <Route path="/" element={<Products />} />
         <Route path="/products" element={<Products />} />
         <Route path="/Bag" element={<Bag />} />
       </Routes>
