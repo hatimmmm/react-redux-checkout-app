@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import Carousel from "../../components/carousel/Carousel";
 
 const Products = () => {
-  const { items } = useSelector((state) => state.cart);
   const { products } = useSelector((state) => state.cart);
   return (
     <div className="products-container">

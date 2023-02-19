@@ -1,40 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { setItems } from "../../store/features/cart/cartSlice";
-
-const AddBtn = ({ classname, onAdd, newItem }) => {
-  if (classname === "disabled-btn") {
-    return (
-      <button whileTap={{ scale: 0.8 }} className={classname}>
-        add to cart
-      </button>
-    );
-  } else {
-    return (
-      <button
-        whileTap={{ scale: 0.8 }}
-        onClick={() => onAdd(newItem)}
-        className={classname}
-      >
-        add to cart
-      </button>
-    );
-  }
-};
-
-const RemBtn = ({ onAdd, newItem }) => {
-  return (
-    <button
-      whileTap={{ scale: 0.8 }}
-      onClick={() => onAdd(newItem)}
-      className="remove-btn"
-    >
-      remove
-    </button>
-  );
-};
+import Product from "../product/Product";
 
 const Slider = ({ data, logo }) => {
   const { items } = useSelector((state) => state.cart);
@@ -88,38 +57,9 @@ const Slider = ({ data, logo }) => {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        {data.map((item) => {
-          return (
-            <div className="card-container" key={item.id}>
-              <div className="card-img">
-                <img src={item.image} alt={item.name} />
-              </div>
-              <div className="card-name">
-                <p>{item.name}</p>
-              </div>
-              <div className="price-size">
-                <div
-                  className={item.inStock ? "in-stock" : "in-stock unavailable"}
-                >
-                  {item.inStock ? "in stock" : "unavailable"}
-                </div>
-                <div className="card-price">$ {item.price}.00</div>
-              </div>
-              <div>
-                {items.find((i) => i.id === item.id) ? (
-                  <RemBtn onAdd={onAdd} newItem={item} />
-                ) : (
-                  <AddBtn
-                    onAdd={onAdd}
-                    newItem={item}
-                    classname={!item.inStock ? "disabled-btn" : "add-to-cart"}
-                  />
-                )}
-                {}
-              </div>
-            </div>
-          );
-        })}
+        {data.map((item) => (
+          <Product item={item} onAdd={onAdd} items={items}></Product>
+        ))}
       </Carousel>
     </div>
   );
