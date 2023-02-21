@@ -1,15 +1,8 @@
-/* @import url("./components/add-to-cart/addToCart.css");
-@import url("../src/components/carousel/carousel.css");
-@import url("../src/components/cart/cart.css");
-@import url("../src/components/cart-item/cartItem.css");
-@import url("../src/components/total/total.css");
-@import url("../src/components/navbar/navBar.css");
-@import url("../src/pages/products/products.css");
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: poppins;
 }
 
 #cart-scroll::-webkit-scrollbar-track {
@@ -46,6 +39,9 @@ body {
 
 #root {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .container {
   font-family: poppins;
@@ -56,4 +52,3 @@ body {
   align-items: center;
   flex-direction: column;
 }
- */

@@ -17,14 +17,19 @@ nav {
   align-content: center;
 }
 
-.link-icon {
+.link-icon-active {
+  height: 30px;
+  width: 30px;
+  color: #eb5e28;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.link-icon-inactive {
   height: 30px;
   width: 30px;
   color: #ccc5b9;
   cursor: pointer;
-}
-.active {
-  color: #eb5e28;
+  transition: all 0.5s ease-in-out;
 }
 
 .counter {

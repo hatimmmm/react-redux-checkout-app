@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setName, setQuantity } from "../../store/features/cart/addToCartSlice";
 import { setItems } from "../../store/features/cart/cartSlice";
 import { v4 as uuidv4 } from "uuid";
+import "./addToCart.css";
 
 const ErrMsg = ({ msg }) => {
   return <div className="errMsg"></div>;

@@ -1,4 +1,5 @@
 import React from "react";
+import "./cartItem.css";
 import { BsFillBagXFill } from "react-icons/bs";
 import { TiDelete } from "react-icons/ti";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";

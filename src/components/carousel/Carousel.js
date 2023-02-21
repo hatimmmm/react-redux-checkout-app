@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./carousel.css";
 import { useSelector, useDispatch } from "react-redux";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
