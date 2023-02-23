@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import data from "../../data/items";
 import products from "../../data/techProducts";
-import { create } from "react-router-dom";
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
