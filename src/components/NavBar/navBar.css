@@ -1,6 +1,6 @@
 nav {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   height: 10vh;
   width: 100%;
@@ -8,6 +8,21 @@ nav {
   top: 0;
   z-index: 20;
   padding: 0 5%;
+  backdrop-filter: blur(10px) brightness(60%);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+}
+.logo img {
+  height: 7vh;
 }
 
 .cart-icon-container {
@@ -17,19 +32,17 @@ nav {
   align-content: center;
 }
 
-.link-icon-active {
-  height: 30px;
-  width: 30px;
-  color: #eb5e28;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-}
-.link-icon-inactive {
+.link-icon {
   height: 30px;
   width: 30px;
   color: #ccc5b9;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  text-decoration: none;
+}
+
+.active {
+  color: #eb5e28;
 }
 
 .counter {

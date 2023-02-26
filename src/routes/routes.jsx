@@ -27,14 +27,14 @@ const router = createBrowserRouter([
     ],
   },
 
-  //   {
-  //     path: "/",
-  //     element: <GuestLayout />,
-  //     children: [
-  //       { path: "/login", element: <Login /> },
-  //       { path: "/signup", element: <Signup /> },
-  //     ],
-  //   },
+  {
+    path: "/",
+    element: <GuestLayout />,
+    children: [
+      { path: "/login", element: <Login /> },
+      { path: "/signup", element: <Signup /> },
+    ],
+  },
 ]);
 
 export default router;
